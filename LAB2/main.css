@@ -1,0 +1,171 @@
+/* main.css */
+
+/* ===== Body & General ===== */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 30px;
+    color: #000000;
+    text-align: center;
+}
+
+/* ===== Page Header / Title ===== */
+.page-header {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px 30px;
+    margin-bottom: 6px;
+    border: none;
+    width: 100%;
+}
+
+.page-header h1 {
+    font-size: 26px;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    color: #000000;
+    margin: 0;
+}
+
+/* ===== Navigation Links ===== */
+.nav-links {
+    text-align: center;
+    margin: 6px auto 14px auto;
+    font-size: 15px;
+}
+
+.nav-links a {
+    color: #0645ad;
+    text-decoration: underline;
+    margin: 0 4px;
+}
+
+.nav-links a:hover {
+    color: #cc0000;
+}
+
+.nav-separator {
+    color: #000000;
+}
+
+/* ===== Form Container Box ===== */
+.form-container {
+    width: 420px;
+    margin: 0 auto;
+    padding: 20px 40px 30px 40px;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    text-align: left;
+}
+
+/* ===== Form Table ===== */
+.form-table {
+    border: 2px solid #000000;
+    margin: auto;
+    width: 420px;
+}
+
+.form-table td {
+    padding: 6px 10px;
+    font-size: 15px;
+    text-align: left;
+}
+
+.form-table td input[type="text"],
+.form-table td input[type="password"],
+.form-table td input[type="email"],
+.form-table td input[type="date"],
+.form-table td input[type="tel"],
+.form-table td input[type="number"],
+.form-table td select {
+    width: 180px;
+    padding: 3px 6px;
+    font-size: 14px;
+    border: 1px solid #aaaaaa;
+    height: 26px;
+    background-color: #ffffff;
+}
+
+/* ===== Button TD ===== */
+.form-table td.btn-td {
+    text-align: left;
+    padding-top: 20px;
+}
+
+/* ===== Form Row ===== */
+.form-row {
+    margin-bottom: 14px;
+    font-size: 15px;
+}
+
+.form-row label {
+    display: inline-block;
+    width: 90px;
+    font-family: 'Arial', sans-serif;
+    color: #000000;
+}
+
+.form-row input[type="text"],
+.form-row input[type="password"],
+.form-row input[type="email"],
+.form-row input[type="date"],
+.form-row input[type="tel"],
+.form-row input[type="number"],
+.form-row input[type="search"],
+.form-row select,
+.form-row input[type="time"] {
+    width: 180px;
+    padding: 3px 6px;
+    font-size: 14px;
+    border: 1px solid #aaaaaa;
+    height: 26px;
+    background-color: #ffffff;
+}
+
+/* ===== Radio Buttons ===== */
+.form-row .radio-group {
+    display: inline-block;
+    width: 180px;
+}
+
+/* ===== Buttons ===== */
+.btn-signup {
+    background-color: #66cc33;
+    color: #000000;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    border: none;
+    padding: 7px 12px;
+    margin-right: 8px;
+    height: 32px;
+    width: 70px;
+    border-radius: 6px;
+}
+
+.btn-cancel {
+    background-color: #ff0000;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    border: none;
+    padding: 7px 12px;
+    height: 32px;
+    width: 70px;
+    border-radius: 6px;
+}
+
+.btn-signup:hover {
+    background-color: #55bb22;
+}
+
+.btn-cancel:hover {
+    background-color: #cc0000;
+}
+
+/* ===== Button Row ===== */
+.btn-row {
+    margin-top: 20px;
+    text-align: left;
+    padding-left: 0px;
+}
