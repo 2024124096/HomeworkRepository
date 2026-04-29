@@ -1,0 +1,448 @@
+/* main.css */
+
+/* ===== Body & General ===== */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 30px;
+    color: #000000;
+    text-align: center;
+}
+
+/* ===== Header Animation ===== */
+.header-wrapper {
+    width: 1020px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.page-header-index {
+    text-align: left;
+    background-color: #ffffff;
+    padding: 10px 0;
+    margin-bottom: 6px;
+    border: none;
+    width: 100%;
+}
+
+.page-header {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px 30px;
+    margin-bottom: 6px;
+    border: none;
+    width: 100%;
+}
+
+.page-header h1 {
+    font-size: 26px;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    color: #000000;
+    margin: 0;
+}
+
+.header-text {
+    font-size: 26px;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    color: #000000;
+    margin: 0;
+    animation-name: slideFromRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes slideFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+/* ===== Navigation ===== */
+.main-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 1020px;
+    margin: 0 auto 14px auto;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    padding: 4px 0;
+}
+
+.main-nav a {
+    flex-grow: 0;
+    color: #0645ad;
+    text-decoration: underline;
+    margin-right: 16px;
+    font-size: 15px;
+    font-family: 'Arial', sans-serif;
+}
+
+.main-nav a:hover {
+    color: #cc0000;
+}
+
+/* ===== Main Content Wrapper ===== */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    width: 1020px;
+    margin: 0 auto;
+    border: 1px solid #aaaaaa;
+}
+
+/* ===== Movies Section ===== */
+.movies-section {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #000000;
+    padding: 10px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-align: left;
+    margin: 4px 0 10px 0;
+}
+
+/* ===== Movie Cards Row ===== */
+.movie-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    border: 1px solid #0000cc;
+    padding: 6px;
+}
+
+/* ===== Movie Card ===== */
+.movie-card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border: 1px solid #cccccc;
+    min-height: 200px;
+    padding: 4px;
+    position: relative;
+}
+
+/* ===== Movie Image Wrapper ===== */
+.movie-img-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.movie-img {
+    width: 220px;
+    height: 150px;
+    display: block;
+    transition: transform 2s;
+}
+
+.movie-img-wrapper:hover .movie-img {
+    transform: scale(1.2);
+}
+
+.movie-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    display: none;
+    padding-top: 60px;
+}
+
+.movie-img-wrapper:hover .movie-overlay {
+    display: block;
+}
+
+.movie-title {
+    display: none;
+}
+
+/* ===== About Section ===== */
+.about-section {
+    padding: 10px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.about-text {
+    flex-grow: 1;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 10px;
+}
+
+/* ===== Navigation Links (for login/signup pages) ===== */
+.nav-links {
+    text-align: center;
+    margin: 6px auto 14px auto;
+    font-size: 15px;
+}
+
+.nav-links a {
+    color: #0645ad;
+    text-decoration: underline;
+    margin: 0 4px;
+}
+
+.nav-links a:hover {
+    color: #cc0000;
+}
+
+.nav-separator {
+    color: #000000;
+}
+
+/* ===== Form Container Box ===== */
+.form-container {
+    width: 420px;
+    margin: 0 auto;
+    padding: 20px 40px 30px 40px;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    text-align: left;
+}
+
+/* ===== Form Table ===== */
+.form-table {
+    border: 2px solid #000000;
+    margin: auto;
+    width: 420px;
+}
+
+.form-table td {
+    padding: 6px 10px;
+    font-size: 15px;
+    text-align: left;
+}
+
+.form-table td input[type="text"],
+.form-table td input[type="password"],
+.form-table td input[type="email"],
+.form-table td input[type="date"],
+.form-table td input[type="tel"],
+.form-table td input[type="number"],
+.form-table td select {
+    width: 180px;
+    padding: 3px 6px;
+    font-size: 14px;
+    border: 1px solid #aaaaaa;
+    height: 26px;
+    background-color: #ffffff;
+}
+
+/* ===== Button TD ===== */
+.form-table td.btn-td {
+    text-align: left;
+    padding-top: 20px;
+}
+
+/* ===== Form Row ===== */
+.form-row {
+    margin-bottom: 14px;
+    font-size: 15px;
+}
+
+.form-row label {
+    display: inline-block;
+    width: 90px;
+    font-family: 'Arial', sans-serif;
+    color: #000000;
+}
+
+.form-row input[type="text"],
+.form-row input[type="password"],
+.form-row input[type="email"],
+.form-row input[type="date"],
+.form-row input[type="tel"],
+.form-row input[type="number"],
+.form-row input[type="search"],
+.form-row select,
+.form-row input[type="time"] {
+    width: 180px;
+    padding: 3px 6px;
+    font-size: 14px;
+    border: 1px solid #aaaaaa;
+    height: 26px;
+    background-color: #ffffff;
+}
+
+/* ===== Radio Buttons ===== */
+.form-row .radio-group {
+    display: inline-block;
+    width: 180px;
+}
+
+/* ===== Buttons ===== */
+.btn-signup {
+    background-color: #66cc33;
+    color: #000000;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    border: none;
+    padding: 7px 12px;
+    margin-right: 8px;
+    height: 32px;
+    width: 70px;
+    border-radius: 6px;
+}
+
+.btn-cancel {
+    background-color: #ff0000;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    border: none;
+    padding: 7px 12px;
+    height: 32px;
+    width: 70px;
+    border-radius: 6px;
+}
+
+.btn-signup:hover {
+    background-color: #55bb22;
+}
+
+.btn-cancel:hover {
+    background-color: #cc0000;
+}
+
+/* ===== Button Row ===== */
+.btn-row {
+    margin-top: 20px;
+    text-align: left;
+    padding-left: 0px;
+}
+
+/* ===================================================
+   MEDIA QUERIES with 3 cases: ~480px / 481~800px / 801px~
+   =================================================== */
+
+/* ===== Case 1: ~ 480px ===== */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .header-wrapper {
+        width: 100%;
+    }
+
+    .main-nav {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .main-nav a {
+        margin: 4px 0;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .movie-row {
+        flex-direction: column;
+    }
+
+    .movie-card {
+        flex-grow: 0;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text {
+        margin: 0 0 10px 0;
+    }
+}
+
+/* ===== Case 2: 481px ~ 800px ===== */
+@media (min-width: 481px) and (max-width: 800px) {
+    body {
+        padding: 15px;
+    }
+
+    .header-wrapper {
+        width: 100%;
+    }
+
+    .main-nav {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .main-nav a {
+        margin: 4px 0;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .movie-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .movie-card {
+        width: 46%;
+        flex-grow: 0;
+        margin: 4px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text {
+        margin: 0 0 10px 0;
+    }
+}
+
+/* ===== Case 3: 801px ~ ===== */
+@media (min-width: 801px) {
+    .header-wrapper {
+        width: 1020px;
+    }
+
+    .main-nav {
+        width: 1020px;
+        flex-direction: row;
+    }
+
+    .main-content {
+        width: 1020px;
+    }
+
+    .movie-row {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .about-content {
+        flex-direction: row;
+    }
+}

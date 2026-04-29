@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- signup.html -->
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Sign up</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+
+        <!-- Page Header -->
+        <header class="page-header">
+            <h1>Welcome to INTERNET-PROGRAMMING MOVIE SITE</h1>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav-links">
+            <a href="login.html">로그인</a>
+            |
+            <a href="signup.html">회원가입</a>
+        </nav>
+
+        <!-- Signup Form -->
+        <form method="GET" action="#">
+            <table class="form-table">
+                <tbody>
+
+                    <!-- 이름 -->
+                    <tr>
+                        <td><label for="name">이름 :</label></td>
+                        <td><input type="text" id="name" name="name"
+                                   autofocus required /></td>
+                    </tr>
+
+                    <!-- 생일 -->
+                    <tr>
+                        <td><label for="birthday">생일 :</label></td>
+                        <td><input type="date" id="birthday" name="birthday"
+                                   placeholder="연도-월-일"
+                                   required /></td>
+                    </tr>
+
+                    <!-- 성별 -->
+                    <tr>
+                        <td>성별 :</td>
+                        <td>
+                            <label for="male"><input type="radio" id="male" name="gender" value="male" required />남성</label>
+                            &nbsp;&nbsp;
+                            <label for="female"><input type="radio" id="female" name="gender" value="female" />여성</label>
+                        </td>
+                    </tr>
+
+                    <!-- 학년 -->
+                    <tr>
+                        <td><label for="year">학년 :</label></td>
+                        <td><input type="number" id="year" name="year"
+                                   min="1" max="4" step="1"
+                                   class="input-spinner"
+                                   required /></td>
+                    </tr>
+
+                    <!-- 아이디 -->
+                    <tr>
+                        <td><label for="userid">아이디 :</label></td>
+                        <td><input type="text" id="userid" name="userid"
+                                   required /></td>
+                    </tr>
+
+                    <!-- 비밀번호 -->
+                    <tr>
+                        <td><label for="password">비밀번호 :</label></td>
+                        <td><input type="password" id="password" name="password"
+                                   required /></td>
+                    </tr>
+
+                    <!-- 이메일 -->
+                    <tr>
+                        <td><label for="email">이메일 :</label></td>
+                        <td><input type="email" id="email" name="email"
+                                   required autocomplete="on" /></td>
+                    </tr>
+
+                    <!-- 전화번호 -->
+                    <tr>
+                        <td><label for="tel">전화번호 :</label></td>
+                        <td><input type="tel" id="tel" name="tel"
+                                   pattern="\d{3}-\d{3,4}-\d{4}"
+                                   required /></td>
+                    </tr>
+
+                    <!-- 보안 질문 -->
+                    <tr>
+                        <td><label for="secq">보안 질문 :</label></td>
+                        <td>
+                            <select id="secq" name="secq" required>
+                                <option value="">질문을 선택하세요</option>
+                                <option value="genre">좋아하는 영화 장르는?</option>
+                                <option value="city">태어난 도시는?</option>
+                                <option value="school">초등학교 이름은?</option>
+                                <option value="food">좋아하는 음식은?</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!-- 답변 -->
+                    <tr>
+                        <td><label for="answer">답변 :</label></td>
+                        <td><input type="text" id="answer" name="answer"
+                                   required /></td>
+                    </tr>
+
+                    <!-- 버튼 -->
+                    <tr>
+                        <td colspan="2" class="btn-td">
+                            <input type="submit" value="Signup" class="btn-signup" />
+                            <input type="reset" value="Cancel" class="btn-cancel" />
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </form>
+
+    </body>
+</html>
