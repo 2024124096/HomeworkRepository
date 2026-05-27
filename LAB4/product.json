@@ -1,0 +1,170 @@
+[
+    {
+        "title": "Toy Story",
+        "rating": 7.7,
+        "release_date": "1995-10-30",
+        "poster": "images/movie01.jpg",
+        "overview": "Led by Woody, Andy's toys live happily in his room until Andy's birthday brings Buzz Lightyear onto the scene. Afraid of losing his place in Andy's heart, Woody plots against Buzz. But when circumstances separate Buzz and Woody from their owner, the duo eventually learns to put aside their differences."
+    },
+    {
+        "title": "Jumanji",
+        "rating": 6.9,
+        "release_date": "1995-12-15",
+        "poster": "images/movie02.jpg",
+        "overview": "When siblings Judy and Peter discover an enchanted board game that opens the door to a magical world, they unwittingly invite Alan into their living room. Alan's only hope for freedom is to finish the game, which proves risky as all three find themselves running from giant rhinoceroses, evil monkeys and other terrifying creatures."
+    },
+    {
+        "title": "The Lion King",
+        "rating": 8.0,
+        "release_date": "1994-06-23",
+        "poster": "images/movie03.jpg",
+        "overview": "A young lion cub named Simba can't wait to be king. But his uncle craves the title for himself and will stop at nothing to get it."
+    },
+    {
+        "title": "Forrest Gump",
+        "rating": 8.2,
+        "release_date": "1994-07-06",
+        "poster": "images/movie04.jpg",
+        "overview": "A man with a low IQ has accomplished great things in his life and been present during significant historic events. Yet, despite all the things he has attained, his one true love eludes him. 'Forrest Gump' is the story of a man who rose above his challenges, and who proved that determination, courage, and love are more important than ability."
+    },
+    {
+        "title": "The Matrix",
+        "rating": 7.9,
+        "release_date": "1999-03-30",
+        "poster": "images/movie05.jpg",
+        "overview": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth."
+    },
+    {
+        "title": "Titanic",
+        "rating": 7.5,
+        "release_date": "1997-11-18",
+        "poster": "images/movie06.jpg",
+        "overview": "On a ship called Titanic when young Rose boards the departing ship with the upper-class passengers, her mother and her fiancé. Meanwhile, a drifter and artist named Jack Dawson and his best friend Fabrizio De Rossi win third-class tickets to the ship in a game. And she explains the whole story from departure until the death of Titanic on its first and last voyage April 15th."
+    },
+    {
+        "title": "Finding Nemo",
+        "rating": 7.6,
+        "release_date": "2003-05-30",
+        "poster": "images/movie07.jpg",
+        "overview": "Nemo, an adventurous young clownfish, is unexpectedly taken from his Great Barrier Reef home to a dentist's office aquarium. It's up to his worrisome father Marlin and a friendly but forgetful fish Dory to bring Nemo home -- meeting vegetarian sharks, surfer dude turtles, hypnotic jellyfish, hungry seagulls, and more along the way."
+    },
+    {
+        "title": "Inception",
+        "rating": 8.1,
+        "release_date": "2010-07-14",
+        "poster": "images/movie08.jpg",
+        "overview": "Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: \"inception\", the implantation of another person's idea into a target's subconscious."
+    },
+    {
+        "title": "Interstellar",
+        "rating": 8.1,
+        "release_date": "2014-11-05",
+        "poster": "images/movie09.jpg",
+        "overview": "Interstellar chronicles the adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage."
+    },
+    {
+        "title": "The Dark Knight",
+        "rating": 8.3,
+        "release_date": "2008-07-16",
+        "poster": "images/movie10.jpg",
+        "overview": "Batman raises the stakes in his war on crime. Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker."
+    },
+    {
+        "title": "Up",
+        "rating": 7.8,
+        "release_date": "2009-05-13",
+        "poster": "images/movie11.jpg",
+        "overview": "Carl Fredricksen spent his entire life dreaming of exploring the globe and experiencing life to its fullest. But at age 78, life seems to have passed him by, until a twist of fate (and a persistent 8-year old Wilderness Explorer named Russell) gives him a new lease on life."
+    },
+    {
+        "title": "About Time",
+        "rating": 7.8,
+        "release_date": "2013-08-16",
+        "poster": "images/movie12.jpg",
+        "overview": "The night after another unsatisfactory New Year party, Tim's father tells his son that the men in his family have always had the ability to travel through time. Tim can't change history, but he can change what happens and has happened in his own life by getting a girlfriend. Sadly, that turns out not to be as easy as he thinks."
+    },
+    {
+        "title": "Midnight in Paris",
+        "rating": 7.4,
+        "release_date": "2011-05-11",
+        "poster": "images/movie13.jpg",
+        "overview": "A romantic comedy about a family traveling to the French capital for business. The party includes a young engaged couple forced to confront the illusion that a life different from their own is better."
+    },
+    {
+        "title": "Howl's Moving Castle",
+        "rating": 8.2,
+        "release_date": "2004-11-19",
+        "poster": "images/movie14.jpg",
+        "overview": "When Sophie, a shy young woman, is cursed with an old body by a spiteful witch, her only chance of breaking the spell lies with a self-indulgent yet insecure young wizard and his companions in his legged, walking home."
+    },
+    {
+        "title": "Me Before You",
+        "rating": 7.6,
+        "release_date": "2016-06-02",
+        "poster": "images/movie15.jpg",
+        "overview": "A successful man becomes wheelchair bound following an accident. The man decides his life is not worth living until the girl is hired for six months to be his new caretaker. Worlds apart and trapped together by circumstance. But the girl becomes determined to prove to the man that life is worth living and as they embark on a series of adventures together."
+    },
+    {
+        "title": "La La Land",
+        "rating": 7.9,
+        "release_date": "2016-11-29",
+        "poster": "images/movie16.jpg",
+        "overview": "Mia, an aspiring actress, serves lattes to movie stars in between auditions and Sebastian, a jazz musician, scrapes by playing cocktail party gigs in dingy bars, but as success mounts they are faced with decisions that begin to fray the fragile fabric of their love affair, and the dreams they worked so hard to maintain in each other threaten to rip them apart."
+    },
+    {
+        "title": "The Avengers",
+        "rating": 7.4,
+        "release_date": "2012-04-25",
+        "poster": "images/movie17.jpg",
+        "overview": "When an unexpected enemy emerges and threatens global safety and security, Nick Fury, director of the international peacekeeping agency known as S.H.I.E.L.D., finds himself in need of a team to pull the world back from the brink of disaster. Spanning the globe, a daring recruitment effort begins!"
+    },
+    {
+        "title": "Frozen",
+        "rating": 7.3,
+        "release_date": "2013-11-27",
+        "poster": "images/movie18.jpg",
+        "overview": "Young princess Anna of Arendelle dreams about finding true love at her sister Elsa’s coronation. Fate takes her on a dangerous journey in an attempt to end the eternal winter that has fallen over the kingdom. On an adventure where she will find out what friendship, courage, family, and true love really means."
+    },
+    {
+        "title": "Spirited Away",
+        "rating": 8.3,
+        "release_date": "2001-07-20",
+        "poster": "images/movie19.jpg",
+        "overview": "A ten year old girl who wanders away from her parents along a path that leads to a world ruled by strange and unusual monster-like animals. Her parents have been changed into pigs along with others inside a bathhouse full of these creatures. Will she ever see the world how it once was?"
+    },
+    {
+        "title": "The Secret Life of Walter Mitty",
+        "rating": 7.0,
+        "release_date": "2013-12-18",
+        "poster": "images/movie20.jpg",
+        "overview": "A timid magazine photo manager who lives life vicariously through daydreams embarks on a true-life adventure when a negative goes missing."
+    },
+    {
+        "title": "The Pianist",
+        "rating": 8.1,
+        "release_date": "2002-09-24",
+        "poster": "images/movie21.jpg",
+        "overview": "The Pianist is a film adapted from the biography of Wladyslaw Szpilman. A Jewish-Polish pianist who during the second world war lived and hid miraculously in Warsaw after having gone through a terrible tragedy. A film from Roman Polanski."
+    },
+    {
+        "title": "Avatar",
+        "rating": 7.2,
+        "release_date": "2009-12-10",
+        "poster": "images/movie22.jpg",
+        "overview": "In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization."
+    },
+    {
+        "title": "Whiplash",
+        "rating": 8.3,
+        "release_date": "2014-10-10",
+        "poster": "images/movie23.jpg",
+        "overview": "Under the direction of a ruthless instructor, a talented young drummer begins to pursue perfection at any cost, even his humanity."
+    },
+    {
+        "title": "The Truman Show",
+        "rating": 7.8,
+        "release_date": "1998-06-04",
+        "poster": "images/movie24.jpg",
+        "overview": "Truman Burbank is the star of \"The Truman Show\", a 24-hour-a-day \"reality\" TV show that broadcasts every aspect of his life -- live and in color -- without his knowledge. His entire life has been an unending soap opera for consumption by the rest of the world. And everyone he knows -- including his wife and his best friend -- is really an actor, paid to be part of his life."
+    }
+]

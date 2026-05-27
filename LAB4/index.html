@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Main Page</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+
+        <script>
+            // 전역 변수
+            let allMovies = [];
+            let viewMovies = [];
+            let counter = 0;
+
+            const PAGE_SIZE = 6;
+
+            // 페이지가 로드되면 영화 불러오기
+            document.addEventListener("DOMContentLoaded", function() {
+                loadMovies();
+
+                document.getElementById("filter-btn").addEventListener("click", applyFilter);
+
+                let sortRadios = document.querySelectorAll(".sort-radio");
+                for (let i = 0; i < sortRadios.length; i++) {
+                    sortRadios[i].addEventListener("change", applyFilter);
+                }
+
+                // 무한 스크롤
+                window.onscroll = function() {
+                    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                        showNextMovies();
+                    }
+                };
+            });
+
+            // Fetch API로 product.json 불러오기
+            function loadMovies() {
+                fetch("product.json")
+                    .then(checkStatus)
+                    .then(response => response.json())
+                    .then(processData)
+                    .catch(handleError);
+            }
+
+            function checkStatus(response) {
+                if (response.ok) {
+                    return response;
+                } else {
+                    throw Error("Error in request");
+                }
+            }
+
+            // 불러온 데이터 처리
+            function processData(data) {
+                allMovies = data;
+                applyFilter();
+            }
+
+            // 에러 처리
+            function handleError(error) {
+                console.log("Fetch problem: " + error.message);
+            }
+
+            // 검색 + 정렬 적용
+            function applyFilter() {
+                let keyword = document.getElementById("search-input").value;
+
+                let pattern = new RegExp(keyword, "i");
+                viewMovies = allMovies.filter(function(movie) {
+                    return movie.title.search(pattern) !== -1;
+                });
+
+                let sortValue = "";
+                let sortRadios = document.querySelectorAll(".sort-radio");
+                for (let i = 0; i < sortRadios.length; i++) {
+                    if (sortRadios[i].checked) {
+                        sortValue = sortRadios[i].value;
+                    }
+                }
+
+                if (sortValue === "rating-desc") {
+                    viewMovies.sort(function(a, b) { return b.rating - a.rating; });
+                } else if (sortValue === "rating-asc") {
+                    viewMovies.sort(function(a, b) { return a.rating - b.rating; });
+                } else if (sortValue === "date-desc") {
+                    viewMovies.sort(function(a, b) {
+                        if (a.release_date < b.release_date) { return 1; }
+                        if (a.release_date > b.release_date) { return -1; }
+                        return 0;
+                    });
+                } else if (sortValue === "date-asc") {
+                    viewMovies.sort(function(a, b) {
+                        if (a.release_date < b.release_date) { return -1; }
+                        if (a.release_date > b.release_date) { return 1; }
+                        return 0;
+                    });
+                }
+
+                document.getElementById("movie-list").innerHTML = "";
+                counter = 0;
+                showNextMovies();
+            }
+
+            // 무한 스크롤
+            function showNextMovies() {
+                let start = counter;
+                let end = counter + PAGE_SIZE;
+                let nextMovies = viewMovies.slice(start, end);
+                counter = end;
+
+                nextMovies.forEach(addMovieCard);
+            }
+
+            function addMovieCard(movie) {
+                let card = document.createElement("div");
+                card.className = "movie-card";
+
+                let imgWrapper = document.createElement("div");
+                imgWrapper.className = "movie-img-wrapper";
+
+                let img = document.createElement("img");
+                img.src = movie.poster;
+                img.alt = movie.title;
+                img.className = "movie-img";
+
+                let overlay = document.createElement("div");
+                overlay.className = "movie-overlay";
+                overlay.innerHTML = "줄거리: " + movie.overview;
+
+                imgWrapper.onmouseover = function() {
+                    overlay.style.display = "block";
+                };
+                imgWrapper.onmouseout = function() {
+                    overlay.style.display = "none";
+                };
+
+                imgWrapper.appendChild(img);
+                imgWrapper.appendChild(overlay);
+
+                let title = document.createElement("p");
+                title.className = "movie-title";
+                title.innerHTML = movie.title;
+
+                let date = document.createElement("p");
+                date.className = "movie-info";
+                date.innerHTML = "개봉일: " + movie.release_date;
+
+                let rating = document.createElement("p");
+                rating.className = "movie-info";
+                rating.innerHTML = "평점: " + movie.rating + " / 10";
+
+                card.appendChild(imgWrapper);
+                card.appendChild(title);
+                card.appendChild(date);
+                card.appendChild(rating);
+
+                document.getElementById("movie-list").appendChild(card);
+            }
+        </script>
+    </head>
+    <body>
+
+        <div class="header-wrapper">
+            <header class="page-header-index">
+                <h1 class="header-text">Welcome to INTERNET-PROGRAMMING MOVIE SITE</h1>
+            </header>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <a href="index.html">메인페이지</a>
+            <a href="login.html">로그인</a>
+            <a href="signup.html">회원가입</a>
+        </nav>
+
+        <!-- Main Content Wrapper -->
+        <div class="main-content">
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="search-input" class="search-input"
+                       placeholder="키워드를 입력하세요." />
+                <button type="button" id="filter-btn" class="filter-btn">Filter results</button>
+            </div>
+
+            <!-- Movies Section -->
+            <div class="movies-section">
+                <h2 class="section-title">Movies</h2>
+
+                <!-- Movies Body -->
+                <div class="movies-body">
+
+                    <!-- Sort Box -->
+                    <div class="sort-box">
+                        <p class="sort-title">정렬 기준</p>
+                        <label class="sort-option">
+                            <input type="radio" name="sort" value="rating-desc" class="sort-radio" /> 평점 내림차순
+                        </label>
+                        <label class="sort-option">
+                            <input type="radio" name="sort" value="rating-asc" class="sort-radio" /> 평점 오름차순
+                        </label>
+                        <label class="sort-option">
+                            <input type="radio" name="sort" value="date-desc" class="sort-radio" /> 개봉 내림차순
+                        </label>
+                        <label class="sort-option">
+                            <input type="radio" name="sort" value="date-asc" class="sort-radio" /> 개봉 오름차순
+                        </label>
+                    </div>
+
+                    <!-- Movie List (영화 카드들이 JS로 추가되는 영역) -->
+                    <div class="movie-row" id="movie-list"></div>
+
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="about-section">
+                <h2 class="section-title">About</h2>
+                <!-- About Content -->
+                <div class="about-content">
+                    <p class="about-text">이 사이트는 제가 좋아하는 영화들을 소개하는 영화 정보 사이트입니다. 다양한 장르와 시대의 영화를 모아 두었고, 검색창에 키워드를 입력하면 제목에 해당 단어가 들어간 영화만 골라서 보여줍니다. 또한 평점과 개봉일을 기준으로 영화를 정렬할 수 있습니다.</p>
+                    <p class="about-text">영화 포스터에 마우스를 올리면 그 영화의 줄거리가 나타나며, 페이지를 아래로 스크롤하면 더 많은 영화가 계속 이어서 나타납니다. 영화를 통해 다양한 감정과 이야기를 함께 나눠보세요!</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
